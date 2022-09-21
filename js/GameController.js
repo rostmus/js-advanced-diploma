@@ -36,11 +36,11 @@ export default class GameController {
   }
 
   onCellClick(index) {
-    this.gamePlay(this.onCellEnter)
     // TODO: react to click
   }
 
   onCellEnter(index) {
+    alert(1)
     // TODO: react to mouse enter
   }
 
