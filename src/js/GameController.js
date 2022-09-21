@@ -48,7 +48,7 @@ export default class GameController {
     const cell = document.querySelectorAll('.cell')[index]
     if(cell.querySelector('.character')) {
       console.log('есть')
-      this.showCellTooltip('сракота', index)
+      this.showCellTooltip('с', index)
     }
     // TODO: react to mouse enter
   }
