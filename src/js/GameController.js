@@ -31,16 +31,25 @@ export default class GameController {
       generate.push(positionCharacter)
     }
     this.gamePlay.redrawPositions(generate)
+    this.cellEnter()
     // TODO: add event listeners to gamePlay events
     // TODO: load saved stated from stateService
   }
 
+  cellEnter() {
+    this.gamePlay.addCellEnterListener(this.onCellEnter)
+  }
+
   onCellClick(index) {
-    this.gamePlay(this.onCellEnter)
     // TODO: react to click
   }
 
   onCellEnter(index) {
+    const cell = document.querySelectorAll('.cell')[index]
+    if(cell.querySelector('.character')) {
+      console.log('есть')
+      this.showCellTooltip('сракота', index)
+    }
     // TODO: react to mouse enter
   }
 
