@@ -1,7 +1,10 @@
 import Team from "./Team";
 import Bowman from './characters/Bowman';
 import Magician from './characters/Magician';
-import Swordsman from './characters/Swordsman'
+import Swordsman from './characters/Swordsman';
+import Daemon from  './characters/Daemon';
+import Undead from './characters/Undead';
+import Vampire from './characters/Vampire'
 
 /**
  * Формирует экземпляр персонажа из массива allowedTypes со
@@ -19,11 +22,22 @@ export function characterGenerator(allowedTypes, maxLevel) {
   const random = Math.floor(Math.random() * characterList.length)
   const levelRandom = Math.floor(Math.random() * maxLevel)
   let character
-  switch(random) {
-    case 0: return character = new Bowman(levelRandom);
-    case 1: return character = new Magician(levelRandom);
-    default: return character = new Swordsman(levelRandom);
+  if(allowedTypes.find((el)=> el == "Bowman")) {
+    switch(random) {
+      case 0: return character = new Bowman(levelRandom);
       break;
+      case 1: return character = new Magician(levelRandom);
+      break
+      default: return character = new Swordsman(levelRandom);
+    }
+  } else {
+    switch(random) {
+      case 0: return character = new Daemon(levelRandom);
+      break;
+      case 1: return character = new Vampire(levelRandom);
+      break
+      default: return character = new Undead(levelRandom);
+    }
   }
 }
 

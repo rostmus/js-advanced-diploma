@@ -239,6 +239,16 @@ body {
   font-weight: bold;
   animation: 500ms fade ease-out;
 }
+.cell__message {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateY(-100%) translateX(-50%);
+  font-size: 10px;
+  width: 160%;
+}
 
 @keyframes fade {
   from {
