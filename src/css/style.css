@@ -250,6 +250,26 @@ body {
   width: 160%;
 }
 
+.cell__border-red {
+  border: 4px dashed red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cell__border-green {
+  border: 4px dashed green;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 @keyframes fade {
   from {
     opacity: 0;
